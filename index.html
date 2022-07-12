@@ -8,11 +8,49 @@
     <link rel='stylesheet' type='text/css' media='screen' href='style.css'>
 </head>
 <body>
-    <input type="button" class="addButton" id="click"></input>
-    <div class="display" id="display">0</div>
-    <div class="upgrade display" id="multiply">x1</br>50pts </div>
-    <div class="upgrade display" id="autoclicker">autoclicker: </br> 500pts</div>
-    <div class="upgrade display" id="bonus">bonus: </br> 5000pts</div>
+    <div class="flex">
+        <section class="sideSection">
+            <span class="flex upgradesBtn">
+                <div class="kuriboh imageUpgrades"></div>
+                <div class="upgrades"><p>Kuriboh </br>coût: 50 kuriboh</p></div>
+            </span>
+            <span class="flex upgradesBtn">
+                <div class="kuriboo imageUpgrades"></div>
+                <div class="upgrades"><p>Kuriboo </br>coût: 50 kuriboh</p></div>
+            </span>
+            <span class="flex upgradesBtn">
+                <div class="kuribee imageUpgrades"></div>
+                <div class="upgrades"><p>Kuribee </br>coût: 50 kuriboh</p></div>
+            </span>
+            <span class="flex upgradesBtn">
+                <div class="kuribeh imageUpgrades"></div>
+                <div class="upgrades"><p>Kuribeh </br>coût: 50 kuriboh</p></div>
+            </span>
+            <span class="flex upgradesBtn">
+                <div class="kuribah imageUpgrades"></div>
+                <div class="upgrades"><p>Kuribah </br>coût: 50 kuriboh</p></div>
+            </span>
+            <span id="winged" class="flex upgradesBtn">
+                <div id="wingedImage"class="winged imageUpgrades"></div>
+                <div class="upgrades"><p id="wingedCost">Kuriboh ailée (lvl 0)</br>0 kuriboh/s</br>coût: 200 kuriboh</p></div>
+            </span>
+
+        </section>
+        <section class="middleSection backgroundFlute">
+            <div class="flex justifyAround"><p id="displayScore">kuriboh: 0</p><p id="displayClick">kuriboh/click: 1</p><p id="displayDps">kuriboh/s: 0</p></div>
+            <span class="helper"></span><img id="click" class="flute" src="./Images/FluteTransp.png" alt="...">
+        </section>
+        <section class="sideSection">
+            <span id="multiply" class="flex upgradesBtn">
+                <div class="upgrades"><p id="multiplyCost">Multiplicateur </br>x1 </br>coût: 50 kuriboh</p></div>
+                <div class="multiply imageUpgrades"></div>
+            </span>
+            <span id="wings" class="flex upgradesBtn hidden">
+                <div class="upgrades"><p id="wingsCost">Ailes transcendantes</br>coût: 50 kuriboh</p></div>
+                <div class="wings imageUpgrades"></div>
+            </span>
+        </section>
+    </div>
     <script src='script.js'></script>
 </body>
 </html>
