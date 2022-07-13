@@ -41,6 +41,10 @@ body{
     height: 100%;
 }
 
+.clickable{
+    background-color: yellowgreen;
+}
+
 .imageUpgrades{
     height: 100%;
     width: 30%;
@@ -100,4 +104,16 @@ body{
 
 .kuribah{
     background-image: url(./Images/KuribahArt.png);
+}
+
+.kuribabylon{
+    background-image: url(./Images/KuribabylonArt.png);
+}
+
+.stars{
+    background-image: url(./Images/FiveStarTwillightArt.png);
+}
+
+.kuribandit{
+    background-image: url(./Images/KuribanditArt.jpg);
 }
