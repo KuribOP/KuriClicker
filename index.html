@@ -9,7 +9,7 @@
 </head>
 <body>
     <div class="flex">
-        <section class="sideSection">
+        <section id="sideContainer" class="sideSection">
             <span id="kuriboh" class="flex upgradesBtn">
                 <div class="kuriboh imageUpgrades"></div>
                 <div id="kuribohClickable" class="upgrades clickable"><p id="kuribohCost">Kuriboh </br>coût: 50 kuriboh</p></div>
@@ -44,10 +44,13 @@
             </span>
 
         </section>
-        <section class="middleSection backgroundFlute">
+
+        <section id="falling" class="middleSection backgroundFlute">
             <div class="flex justifyAround"><p id="displayScore">kuriboh: 0</p><p id="displayClick">kuriboh/click: 1</p><p id="displayDps">kuriboh/s: 0</p></div>
             <span class="helper"></span><img id="click" class="flute" src="./Images/FluteTransp.png" alt="...">
+            
         </section>
+
         <section class="sideSection">
             <span id="multiply" class="flex upgradesBtn">
                 <div class="upgrades clickable"><p id="multiplyCost">Multiplicateur </br>x1 </br>coût: 50 kuriboh</p></div>

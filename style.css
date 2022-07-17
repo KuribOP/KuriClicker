@@ -10,6 +10,7 @@ body{
 }
 
 .middleSection{
+    position: relative;
     width: 60%;
     height: 100vh;
     text-align: center;
@@ -28,6 +29,7 @@ body{
 .justifyAround{
     justify-content: space-around;
 }
+
 
 .upgradesBtn{
     width: 100%;
@@ -116,4 +118,10 @@ body{
 
 .kuribandit{
     background-image: url(./Images/KuribanditArt.jpg);
+}
+
+.kuribohtransp{
+    background-image: url(./Images/Kuriboh1Transp.png);
+    background-repeat: no-repeat;
+    background-size: cover;
 }

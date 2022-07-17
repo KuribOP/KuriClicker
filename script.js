@@ -32,6 +32,11 @@ let kuribah = document.getElementById("kuribah");
 let kuribeh = document.getElementById("kuribeh");
 let kuribee = document.getElementById("kuribee");
 let stars = document.getElementById("stars");
+let container = document.getElementById("falling");
+let containerWidth = container.clientWidth;
+let containerHeight = container.clientHeight;
+let idnumber = 0;
+let getid = false;
 
 addBtn.onclick = addpoint;
 multiply.onclick = addmultiply;
@@ -49,7 +54,51 @@ function addpoint()
 {
     score += click*clickMultiplier;
     scoreDisplay.innerHTML = 'kuriboh: ' + score;
+    fallingkuriboh();
 }
+
+function fallingkuriboh()
+{
+    let newDiv = document.createElement("div");
+    container.appendChild(newDiv);
+    idnumber++;
+    newDiv.id = idnumber + "fallingKuriboh";
+    positionElement();
+}
+
+function positionElement()
+{
+    let sideContainer = document.getElementById("sideContainer");
+    let sideContainerWidth = sideContainer.clientWidth;
+    let setLeftPos = Math.floor(Math.random() * (containerWidth-100));
+    let Currentdiv = document.getElementById(idnumber + "fallingKuriboh");
+    Currentdiv.style.position = "absolute";
+    Currentdiv.style.top = -100 + 'px';
+    Currentdiv.style.left = setLeftPos + 'px';
+    Currentdiv.classList.add("kuribohtransp");
+    Currentdiv.style.width = "100px";
+    Currentdiv.style.height = "100px";
+
+
+    let intervalId;
+    let pos = -100;
+    let rot = Math.floor(Math.random() * 360) ;
+
+    intervalId = setInterval(frame, 10);
+    function frame(){
+        if (pos == containerHeight){
+            clearInterval(intervalId);
+        }else{
+            pos++
+            rot++
+            Currentdiv.style.top = pos + 'px';
+            Currentdiv.style.transform = ("rotate(" + rot + "deg)");
+        }
+    }
+}
+
+
+
 
 function addmultiply(){
     if(score>=multiplyPrice){
