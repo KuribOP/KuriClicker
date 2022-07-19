@@ -17,7 +17,14 @@ body{
     overflow: hidden;
 }
 
+.flute{
+    position: relative;
+    z-index: 2;
+}
+
 .flex{
+    position: relative;
+    z-index: 2;
     display: flex;
 }
 
