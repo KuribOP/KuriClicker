@@ -28,6 +28,12 @@ body{
     display: flex;
 }
 
+.overflow{
+    overflow-y: scroll;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
 .helper{
     display: inline-block;
     vertical-align: bottom;
@@ -127,9 +133,46 @@ body{
 .kuribandit{
     background-image: url(./Images/KuribanditArt.jpg);
 }
-
-.kuribohtransp{
-    background-image: url(./Images/Kuriboh1Transp.png);
+.transp{
     background-repeat: no-repeat;
     background-size: cover;
+}
+.kuribohTransp{
+    background-image: url(./Images/Kuriboh1Transp.png);
+}
+
+.kuribooTransp{
+    background-image: url(./Images/KuribooArt.png);
+}
+
+.kuribeeTransp{
+    background-image: url(./Images/KuribeeArt.png);
+}
+
+.kuribehTransp{
+    background-image: url(./Images/KuribehArt.jpg);
+}
+
+.kuribahTransp{
+    background-image: url(./Images/KuribahArt.png);
+}
+
+.wingedTransp{
+    background-image: url(./Images/WingedKuribohTransp.png);
+}
+
+.winged9Transp{
+    background-image: url(./Images/WingedKuriboh9Art.jpg);
+}
+
+.winged10Transp{
+    background-image: url(./Images/WingedKuriboh10Art.webp);
+}
+
+.kuribanditTransp{
+    background-image: url(./Images/KuribanditTransp.png);
+}
+
+.kuribabylonTransp{
+    background-image: url(./Images/KuribabylonArt.png);
 }
