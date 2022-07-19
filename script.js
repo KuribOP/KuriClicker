@@ -87,6 +87,7 @@ function positionElement()
     intervalId = setInterval(frame, 10);
     function frame(){
         if (pos == containerHeight){
+            Currentdiv.remove();
             clearInterval(intervalId);
         }else{
             pos++
