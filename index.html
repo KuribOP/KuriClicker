@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset='utf-8'>
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
@@ -7,69 +8,104 @@
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel='stylesheet' type='text/css' media='screen' href='style.css'>
 </head>
+
 <body>
     <div class="flex">
-        <section id="sideContainer" class="sideSection">
+        <section class="sideSection overflow overflowleft">
             <span id="kuriboh" class="flex upgradesBtn">
+                <div id="kuribohClickable" class="upgrades clickable overflow noSelect">
+                    <p id="kuribohCost">Kuriboh x0 </br>coût: 50 kuriboh</p>
+                    <p id="kuribohDesc">0 Kp/c => 1 Kp/c</p>
+                </div>
                 <div class="kuriboh imageUpgrades"></div>
-                <div id="kuribohClickable" class="upgrades clickable overflow"><p id="kuribohCost">Kuriboh x1 </br>coût: 50 kuriboh</p></div>
             </span>
-            <span id="kuriboo" class="flex upgradesBtn hidden">
+            <span id="kuriboo" class="flex upgradesBtn hidden noSelect">
+                <div id="kuribooClickable" class="upgrades clickable overflow">
+                    <p id="kuribooCost"></p>
+                    <p id="kuribooDesc">0 Kp/c => 1 Kp/c</p>
+                </div>
                 <div class="kuriboo imageUpgrades"></div>
-                <div id="kuribooClickable" class="upgrades clickable overflow"><p id="kuribooCost"></p></div>
             </span>
-            <span id="kuribee" class="flex upgradesBtn hidden">
+            <span id="kuribee" class="flex upgradesBtn hidden noSelect">
+                <div id="kuribeeClickable" class="upgrades clickable overflow">
+                    <p id="kuribeeCost"></p>
+                    <p id="kuribeeDesc">0 Kp/c => 1 Kp/c</p>
+                </div>
                 <div class="kuribee imageUpgrades"></div>
-                <div id="kuribeeClickable" class="upgrades clickable overflow"><p id="kuribeeCost"></p></div>
             </span>
-            <span id="kuribeh" class="flex upgradesBtn hidden">
+            <span id="kuribeh" class="flex upgradesBtn hidden noSelect">
+                <div id="kuribehClickable" class="upgrades clickable overflow">
+                    <p id="kuribehCost"></p>
+                    <p id="kuribehDesc">0 Kp/c => 1 Kp/c</p>
+                </div>
                 <div class="kuribeh imageUpgrades"></div>
-                <div id="kuribehClickable" class="upgrades clickable overflow"><p id="kuribehCost"></p></div>
             </span>
-            <span id="kuribah" class="flex upgradesBtn hidden">
+            <span id="kuribah" class="flex upgradesBtn hidden noSelect">
+                <div id="kuribahClickable" class="upgrades clickable overflow">
+                    <p id="kuribahCost"></p>
+                    <p id="kuribahDesc">0 Kp/c => 1 Kp/c</p>
+                </div>
                 <div class="kuribah imageUpgrades"></div>
-                <div id="kuribahClickable" class="upgrades clickable overflow"><p id="kuribahCost"></p></div>
             </span>
-            <span id="kuribabylon" class="flex upgradesBtn hidden">
+            <span id="kuribabylon" class="flex upgradesBtn hidden noSelect">
+                <div class="upgrades overflow">
+                    <p id="kuribabylonCost"></p>
+                </div>
                 <div class="kuribabylon imageUpgrades"></div>
-                <div class="upgrades overflow"><p id="kuribabylonCost"></p></div>
             </span>
-            <span id="kuribandit" class="flex upgradesBtn hidden">
+            <span id="kuribandit" class="flex upgradesBtn hidden noSelect">
+                <div class="upgrades overflow">
+                    <p id="kuribanditCost"></p>
+                </div>
                 <div class="kuribandit imageUpgrades"></div>
-                <div class="upgrades overflow"><p id="kuribanditCost"></p></div>
             </span>
-            <span id="winged" class="flex upgradesBtn">
-                <div id="wingedImage"class="winged imageUpgrades"></div>
-                <div id="wingedClickable"class="upgrades clickable overflow"><p id="wingedCost">Kuriboh ailée (lvl 0)</br>0 kuriboh/s</br>coût: 200 kuriboh</p></div>
+            <span id="winged" class="flex upgradesBtn noSelect">
+                <div id="wingedClickable" class="upgrades clickable overflow">
+                    <p id="wingedCost">Kuriboh ailée (lvl 0)</br>coût: 200 kuriboh</p>
+                    <p id="wingedDesc">0 Kp/s => 2 Kp/s</p>
+                </div>
+                <div id="wingedImage" class="winged imageUpgrades"></div>
             </span>
-
         </section>
 
-        <section id="falling" class="middleSection backgroundFlute">
-            <div class="flex justifyAround"><p id="displayScore">kuriboh: 0</p><p id="displayClick">kuriboh/click: 1</p><p id="displayDps">kuriboh/s: 0</p></div>
+        <section id="falling" class="middleSection backgroundFlute noSelect">
+            <div class="flex justifyAround">
+                <p id="displayScore">kuriboh: 0</p>
+                <p id="displayClick">kuriboh/click: 1</p>
+                <p id="displayDps">kuriboh/s: 0</p>
+            </div>
             <span class="helper"></span><img id="click" class="flute" src="./Images/FluteTransp.png" alt="...">
-            
+
         </section>
 
-        <section class="sideSection">
-            <span id="multiply" class="flex upgradesBtn">
-                <div class="upgrades clickable overflow"><p id="multiplyCost">Multiplicateur </br>x1 </br>coût: 50 kuriboh</p></div>
+        <section class="sideSection overflow">
+            <span id="multiply" class="flex upgradesBtn noSelect">
+                <div class="upgrades clickable overflow overflowleft">
+                    <p id="multiplyCost">Multiplicateur </br>x1 </br>coût: 50 kuriboh</p>
+                </div>
                 <div class="multiply imageUpgrades"></div>
             </span>
-            <span id="wings" class="flex upgradesBtn hidden">
-                <div id="wingsClickable overflow" class="upgrades clickable"><p id="wingsCost"></p></div>
+            <span id="berserk" class="flex upgradesBtn hidden noSelect">
+                <div id="berserkClickable" class="upgrades clickable overflow overflowleft">
+                    <p id="berserkCost">Éclat du Berserker</br> coût: 50kuriboh</p>
+                </div>
+                <div class="berserk imageUpgrades"></div>
+            </span>
+            <span id="wings" class="flex upgradesBtn hidden noSelect">
+                <div id="wingsClickable" class="upgrades overflow overflowleft clickable">
+                    <p id="wingsCost"></p>
+                </div>
                 <div class="wings imageUpgrades"></div>
             </span>
-            <span id="stars" class="flex upgradesBtn hidden">
-                <div class="upgrades clickable overflow"><p id="starsCost">Crépuscule à Cinq Étoiles</br> coût: 3 de chaque frère kuriboh</p></div>
+            <span id="stars" class="flex upgradesBtn hidden noSelect">
+                <div class="upgrades clickable overflow overflowleft">
+                    <p id="starsCost">Crépuscule à Cinq Étoiles</br> coût: 3 de chaque frère kuriboh</p>
+                </div>
                 <div class="stars imageUpgrades"></div>
-            </span>
-            <span id="berserk" class="flex upgradesBtn hidden">
-                <div class="upgrades clickable overflow"><p id="berserkCost">Éclat du Berserker</br> coût: 50kuriboh</p></div>
-                <div class="berserk imageUpgrades"></div>
             </span>
         </section>
     </div>
     <script src='script.js'></script>
 </body>
+
 </html>

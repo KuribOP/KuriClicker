@@ -1,15 +1,41 @@
-body{
+body {
     margin: 0;
 }
 
-.sideSection{
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #888;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+.noSelect {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.sideSection {
     width: 20%;
     height: calc(100vh - 10px);
     background-color: aqua;
     padding-top: 10px;
 }
 
-.middleSection{
+
+.middleSection {
     position: relative;
     width: 60%;
     height: 100vh;
@@ -17,162 +43,180 @@ body{
     overflow: hidden;
 }
 
-.flute{
+.flute {
     position: relative;
     z-index: 2;
 }
 
-.flex{
+.flute:hover {
+    transform: scale(1.1);
+}
+
+.flex {
     position: relative;
     z-index: 2;
     display: flex;
 }
 
-.overflow{
-    overflow-y: scroll;
-    white-space: nowrap;
+.overflow {
+    overflow-y: auto;
     text-overflow: ellipsis;
+    direction: ltr;
 }
 
-.helper{
+.overflowleft {
+    direction: rtl;
+}
+
+.helper {
     display: inline-block;
     vertical-align: bottom;
     height: 90%;
 }
 
-.justifyAround{
+.justifyAround {
     justify-content: space-around;
 }
 
 
-.upgradesBtn{
+.upgradesBtn {
     width: 100%;
     height: 10%;
     margin-bottom: 10px;
 }
 
-.upgrades{
+.upgrades {
     background-color: blueviolet;
     width: 70%;
     height: 100%;
 }
 
-.clickable{
+.upgrades p {
+    margin: 0%;
+}
+
+.clickable {
     background-color: yellowgreen;
 }
 
-.imageUpgrades{
+.imageUpgrades {
     height: 100%;
     width: 30%;
     background-size: 100% 100%;
-    background-repeat: no-repeat;   
+    background-repeat: no-repeat;
 }
 
-.hidden{
+.hidden {
     display: none;
 }
 
-.backgroundFlute{
+.backgroundFlute {
     background-image: url(./Images/BackgroundFlute.png);
     background-repeat: no-repeat;
     background-size: cover;
 }
 
-.winged{
+.winged {
     background-image: url(./Images/WingedKuribohArt.jpg);
 }
 
-.winged9{
+.winged9 {
     background-image: url(./Images/WingedKuriboh9Art.jpg);
 }
 
-.winged10{
+.winged10 {
     background-image: url(./Images/WingedKuriboh10Art.webp);
 }
 
-.sphere{
+.sphere {
     background-image: url(./Images/SphereKuribohArt.jpg);
 }
 
-.multiply{
+.multiply {
     background-image: url(./Images/MultiplyArt.png);
 }
 
-.wings{
+.wings {
     background-image: url(./Images/TranscendentWingsArt.jpg);
 }
 
-.kuriboh{
+.kuriboh {
     background-image: url(./Images/Kuriboh2Art.jpg);
 }
 
-.kuriboo{
+.kuriboo {
     background-image: url(./Images/KuribooArt.png);
 }
 
-.kuribee{
+.kuribee {
     background-image: url(./Images/KuribeeArt.png);
 }
 
-.kuribeh{
+.kuribeh {
     background-image: url(./Images/KuribehArt.jpg);
 }
 
-.kuribah{
+.kuribah {
     background-image: url(./Images/KuribahArt.png);
 }
 
-.kuribabylon{
+.kuribabylon {
     background-image: url(./Images/KuribabylonArt.png);
 }
 
-.stars{
+.stars {
     background-image: url(./Images/FiveStarTwillightArt.png);
 }
 
-.kuribandit{
+.kuribandit {
     background-image: url(./Images/KuribanditArt.jpg);
 }
-.transp{
+
+.berserk {
+    background-image: url(./Images/BerserkerCrush.jpg);
+}
+
+.transp {
     background-repeat: no-repeat;
     background-size: cover;
 }
-.kuribohTransp{
+
+.kuribohTransp {
     background-image: url(./Images/Kuriboh1Transp.png);
 }
 
-.kuribooTransp{
+.kuribooTransp {
     background-image: url(./Images/KuribooArt.png);
 }
 
-.kuribeeTransp{
+.kuribeeTransp {
     background-image: url(./Images/KuribeeArt.png);
 }
 
-.kuribehTransp{
+.kuribehTransp {
     background-image: url(./Images/KuribehArt.jpg);
 }
 
-.kuribahTransp{
+.kuribahTransp {
     background-image: url(./Images/KuribahArt.png);
 }
 
-.wingedTransp{
+.wingedTransp {
     background-image: url(./Images/WingedKuribohTransp.png);
 }
 
-.winged9Transp{
+.winged9Transp {
     background-image: url(./Images/WingedKuriboh9Art.jpg);
 }
 
-.winged10Transp{
+.winged10Transp {
     background-image: url(./Images/WingedKuriboh10Art.webp);
 }
 
-.kuribanditTransp{
+.kuribanditTransp {
     background-image: url(./Images/KuribanditTransp.png);
 }
 
-.kuribabylonTransp{
+.kuribabylonTransp {
     background-image: url(./Images/KuribabylonArt.png);
 }
