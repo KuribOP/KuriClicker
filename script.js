@@ -1,4 +1,4 @@
-let score = 1000000000;
+let score = 0;
 let clickMultiplier = 1;
 let click = 1;
 const brotherMaxLvl = 3;
