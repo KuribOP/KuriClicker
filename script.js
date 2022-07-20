@@ -1,4 +1,4 @@
-let score = 0;
+let score = 100000000;
 let clickMultiplier = 1;
 let click = 1;
 const brotherMaxLvl = 3;
@@ -10,7 +10,7 @@ const price = {
     kuribee: 3200,
     kuribeh: 25600,
     kuribah: 204800,
-    berserker: 50
+    berserker: 100
 };
 let wingedMultiplier = 1;
 let berserkerMultiplier = 1;
@@ -56,7 +56,8 @@ const desc = {
     kuribah: document.getElementById("kuribahDesc"),
     kuribeh: document.getElementById("kuribehDesc"),
     kuribee: document.getElementById("kuribeeDesc"),
-    winged: document.getElementById("wingedDesc")
+    winged: document.getElementById("wingedDesc"),
+    berserker: document.getElementById("berserkDesc")
 }
 const upgradeButton = {
     wings: document.getElementById("wings"),
@@ -199,6 +200,8 @@ function addwinged() {
         }
         if (lvl['winged'] == 0) { removeClass(upgradeButton['berserker'], 'hidden'); }
         lvl['winged']++;
+        price['berserker'] *= lvl[winged];
+        desc['berserker'].innerHTML = "coût: " + price['berserker'] + " => " + (price['berserker'] * lvl['winged']);
         price['winged'] *= 2;
         wingedMultiplier += wingedMultiplier;
         if (wingedAutoAcquired == false) {
@@ -356,14 +359,16 @@ function removeValueFromArrayKps(value) {
 function addBerserker() {
     if (canPay(price['berserker']) && berserkerMultiplier < 5) {
         berserkerMultiplier = 5;
-        display['berserker'].innerHTML = timer['berserker'];
+        score -= price['berserker'];
+        price['berserker'] *= lvl[winged];
+        desc['berserker'].innerHTML = timer['berserker'];
         let countdownBerserker = setInterval(countdown, 1000, 'berserker');
         removeClass(descContainer['berserker'], 'clickable');
         setTimeout(() => {
             berserkerMultiplier = 1;
             clearInterval(countdownBerserker);
             timer['berserker'] = 60;
-            display['berserker'].innerHTML = "Éclat du Berserker</br> coût: 50 kuriboh";
+            desc['berserker'].innerHTML = "coût: " + price['berserker'] + " => " + (price['berserker'] * lvl['winged']);
             addClass(descContainer['berserker'], 'clickable');
         }, 60000);
     }
@@ -371,5 +376,5 @@ function addBerserker() {
 
 function countdown(upgradeName) {
     timer[upgradeName] -= 1;
-    display[upgradeName].innerHTML = timer[upgradeName];
+    desc[upgradeName].innerHTML = timer[upgradeName];
 }
